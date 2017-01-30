@@ -48,18 +48,17 @@ function loseGame () {
 
 function checkGuessedArr () {
 	for ( i = 0; i < guessed.length; i++) {
-		if (event.key == guessed[i]) {
+		if (event.key === guessed[i]) {
 			return true;
 			console.log("already guessed this letter")
 		} else {
-			console.log("checked against guessed array")
 		}
 	}
 }
 
 window.onkeydown = function(event) {
 	checkGuessedArr();
-	if (event.keyCode >= 65 && event.keyCode <= 90 && checkGuessedArr !== true ) {
+	if (event.keyCode >= 65 && event.keyCode <= 90 && checkGuessedArr === false) {
 		userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 		console.log("User guess is: " + userGuess);
 		//need to write this as if statment - if userGuess does not already exist in array
@@ -71,5 +70,4 @@ window.onkeydown = function(event) {
 		}
 	} else {
 	}
-
 }
