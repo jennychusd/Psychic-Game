@@ -95,7 +95,7 @@ window.onkeydown = function(event) {
 		if (dupeGuess === false) {
 			guessed.push(userGuess);
 			console.log(guessed);
-		} else { }
+		}
 		
 		// check win game or wrong guess
 		if (userGuess === currentAns) {
